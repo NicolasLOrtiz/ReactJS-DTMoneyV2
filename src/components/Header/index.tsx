@@ -2,7 +2,7 @@ import { HeaderContainer, HeaderContent, NewTransactionButton } from "./styles";
 
 import logoImg from "../../assets/logo.svg";
 
-export function Header() {
+export const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
