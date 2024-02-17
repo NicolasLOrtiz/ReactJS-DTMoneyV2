@@ -1,13 +1,17 @@
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./styles/global";
-import { defaultTheme } from "./styles/themes/default";
+import {ThemeProvider} from "styled-components";
+import {GlobalStyle} from "./styles/global";
+import {defaultTheme} from "./styles/themes/default";
+import {TransactionsProvider} from "./contexts/TransactionsContext.tsx";
+import {Transactions} from "./pages/Transactions";
 
-export const App = () =>  {
+export const App = () => {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
+      <GlobalStyle/>
 
-      <h1>Hello World</h1>
+      <TransactionsProvider>
+        <Transactions/>
+      </TransactionsProvider>
     </ThemeProvider>
   )
 }
