@@ -63,7 +63,7 @@ export const TransactionsProvider = ({children}: TransactionsProviderProps) => {
 
   useEffect(() => {
     fetchTransactions()
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [fetchTransactions]);
 
   return (
     <TransactionsContext.Provider
